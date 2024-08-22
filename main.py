@@ -36,7 +36,6 @@ try:
     df = df.sort_values(
         by="popularity",
         ascending=False)
-    #df = df.drop(columns=["Unnamed: 0","track_id","danceability","energy","key","loudness","mode","speechiness","acousticness","instrumentalness","liveness","valence","tempo","time_signature"])
     df = df[column1]
 except:
     print("Dataset does not include a year column")
@@ -66,16 +65,20 @@ def ui():
         inp = int(input("Enter Selection: "))
 
         if inp == 1:
+            print("Input received")
             print(df1)
             ui()
         elif inp == 2:
+            print("Input received")
             foo = int(input("""How would you like the dataset sorted?:
                         1 - Popularity high to low
                         2 - Year low to high
                         Enter selection: """))
             if foo == 1:
+                print("Input received")
                 print(df.head(50))
             elif foo == 2:
+                print("Input received")
                 df3 = df.sort_values(
                 by="year",
                 ascending=True)
@@ -84,18 +87,21 @@ def ui():
                 print("Invalid input")
             ui()
         elif inp == 3:
+            print("Input received")
             y = np.array(year2)
             x = np.array(year3)
             plt.bar(x,y)
             plt.show()
             ui()
         elif inp == 4:
+            print("Input received")
             y = np.array(year5)
             x = np.array(year3)
             plt.bar(x,y)
             plt.show()
             ui()
         elif inp == 5:
+            print("Input received")
             pass
         else:
             print("Number is not within specified range")
